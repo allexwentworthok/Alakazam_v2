@@ -23,8 +23,8 @@ import { PipesModule } from './pipes/pipes.module';
           HttpClientModule,
           IonicStorageModule.forRoot()
         ],
-          
-          
+
+
 
   providers: [
     StatusBar,
