@@ -1,5 +1,7 @@
 {
   "name": "Alakazam",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

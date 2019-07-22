@@ -1,0 +1,26 @@
+<ion-header 
+            no-border>
+  <ion-toolbar color="warning">
+      <ion-searchbar color="light" placeholder='Busca Aqui'
+                    mode="ios"
+                    animated
+                    (ionChange)="buscar( $event )"
+      >
+      </ion-searchbar>
+      
+          
+    
+  </ion-toolbar>
+</ion-header>
+
+
+    <ion-content>
+
+        
+      <app-productos [productos]="productos" ></app-productos>
+        
+        
+    </ion-content>
+
+
+
