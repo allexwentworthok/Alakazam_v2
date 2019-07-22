@@ -36,9 +36,34 @@ export class ComerciosPage implements OnInit, AfterViewInit {
 
         map.resize();
 
+        // marker California I
         new mapboxgl.Marker()
-        .setLngLat([-55.902849, -27.382299])
+        .setLngLat([-55.89652, -27.36748])
         .addTo(map);
+         // marker California II
+        new mapboxgl.Marker()
+        .setLngLat([-55.89713, -27.37354])
+        .addTo(map);
+         // marker California III
+        new mapboxgl.Marker()
+         .setLngLat([-55.89557, -27.35974])
+         .addTo(map);
+          // marker Changomas Cabo de hornos
+        new mapboxgl.Marker()
+          .setLngLat([-55.9327, -27.4252])
+          .addTo(map);
+           // marker Changomas T. de Tacuari
+        new mapboxgl.Marker()
+         .setLngLat([-55.92651, -27.36754])
+         .addTo(map);
+          // marker Multiexpress T. de Tacuari
+        new mapboxgl.Marker()
+         .setLngLat([-55.94493, -27.36566])
+         .addTo(map);
+          // marker California VI
+        new mapboxgl.Marker()
+          .setLngLat([-55.94825, -27.36529])
+          .addTo(map);
 
 
 
