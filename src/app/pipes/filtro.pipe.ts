@@ -6,10 +6,21 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class FiltroPipe implements PipeTransform {
 
   transform(arreglo: any, texto: string): any[] {
-    console.log(arreglo);
+    
+    if (texto === '') {
+      return arreglo;
+    }
+
+    texto = texto.toLocaleLowerCase();
 
 
-    return arreglo;
+     return arreglo.filter(item => {
+        return item.name.toLowerCase()
+        .includes( texto );
+
+      });
+
+    
   }
 
 }

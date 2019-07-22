@@ -1,7 +1,14 @@
+<ion-searchbar color="warning" placeholder='Busca Aqui'
+                    mode="ios"
+                    animated
+                    (ionChange)="buscar( $event )"
+      >
+      </ion-searchbar>
 <ion-grid fixed>
   <ion-row>
     <ion-col col-12 *ngFor="let producto of productos | filtro: textoBuscar ">
-      <app-producto [producto]="producto"></app-producto>
+      <app-producto [producto]="producto"
+                    [enAgregados]="enAgregados"></app-producto>
     </ion-col>
 
   </ion-row>

@@ -11,25 +11,50 @@ import { DataLocalService } from 'src/app/services/data-local.service';
 export class ProductoComponent implements OnInit {
 
   @Input() producto: Resultado;
+  @Input() enAgregados;
 
   constructor( public actionSheetCtrl: ActionSheetController,
                private datalocalService: DataLocalService ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+    console.log('Agregados', this.enAgregados)
+  }
 
   async lanzarMenu() {
 
+      let guardarBorrarBtn;
+
+      if (this.enAgregados) {
+        guardarBorrarBtn = {
+          text: 'Borrar Producto',
+          icon: 'trash',
+          handler: () => {
+            console.log('Borrar');
+            this.datalocalService.borrarProducto( this.producto );
+          }
+        }
+      }
+        else {
+
+          guardarBorrarBtn = {
+            text: 'Agregar',
+            icon: 'heart',
+            handler: () => {
+              console.log('Favorite clicked');
+              this.datalocalService.guardarProducto( this.producto );
+            }
+          };
+        }
+      
 
       const actionSheet = await this.actionSheetCtrl.create({
         header: 'Opciones',
-        buttons: [ {
-          text: 'Agregar',
-          icon: 'heart',
-          handler: () => {
-            console.log('Favorite clicked');
-            this.datalocalService.guardarProducto( this.producto );
-          }
-        }, {
+        buttons: [ 
+          
+          guardarBorrarBtn,
+          
+          {
           text: 'Cancelar',
           icon: 'close',
           role: 'cancel',

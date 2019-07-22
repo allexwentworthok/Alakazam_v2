@@ -11,7 +11,7 @@ export class ProductosComponent implements OnInit {
   @Input() productos: Resultado [] = [];
   buscados: any[] = [];
     textoBuscar = '';
-
+    @Input() enAgregados = false; 
   constructor(private productosService: ProductosService) { }
 
   ngOnInit() {
@@ -26,6 +26,7 @@ export class ProductosComponent implements OnInit {
   }
 
   buscar( event ) {
+    console.log ('event');
     this.textoBuscar = event.detail.value;
   }
 
