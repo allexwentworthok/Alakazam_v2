@@ -18,7 +18,7 @@ export class ProductoComponent implements OnInit {
 
   ngOnInit() {
 
-    console.log('Agregados', this.enAgregados)
+    console.log('Agregados', this.enAgregados );
   }
 
   async lanzarMenu() {
@@ -33,9 +33,8 @@ export class ProductoComponent implements OnInit {
             console.log('Borrar');
             this.datalocalService.borrarProducto( this.producto );
           }
-        }
-      }
-        else {
+        };
+      } else {
 
           guardarBorrarBtn = {
             text: 'Agregar',
@@ -46,14 +45,14 @@ export class ProductoComponent implements OnInit {
             }
           };
         }
-      
+
 
       const actionSheet = await this.actionSheetCtrl.create({
         header: 'Opciones',
-        buttons: [ 
-          
+        buttons: [
+
           guardarBorrarBtn,
-          
+
           {
           text: 'Cancelar',
           icon: 'close',

@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
+  { path: 'tabs', loadChildren: './pages/tabs/tabs.module#TabsPageModule' },
   { path: 'comercios', loadChildren: './pages/comercios/comercios.module#ComerciosPageModule' },
+  { path: '', loadChildren: './pages/slides/slides.module#SlidesPageModule' },
+  { path: 'productos', loadChildren: './pages/productos/productos.module#ProductosPageModule' },
 ];
 @NgModule({
   imports: [
