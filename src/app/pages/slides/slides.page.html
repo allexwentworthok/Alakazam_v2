@@ -1,10 +1,10 @@
-<ion-content color="danger">
+<ion-content>
 
   <ion-slides pager="true" class="slide-full">
 
     <ion-slide *ngFor="let slide of slides">
 
-      <ion-card mode="ios">
+      <ion-card color="light" mode="ios">
 
         <img [src]="slide.img" class="slide-image">
         
@@ -16,7 +16,7 @@
           {{ slide.desc }}
         </ion-card-content>
 
-      </ion-card>
+      </ion-card >
 
     </ion-slide>
      
