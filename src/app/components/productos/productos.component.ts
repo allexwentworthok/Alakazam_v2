@@ -12,7 +12,7 @@ export class ProductosComponent implements OnInit {
   buscados: any[] = [];
     textoBuscar = '';
     @Input() enAgregados = false; 
-  constructor(private productosService: ProductosService) { }
+  constructor(public productosService: ProductosService) { }
 
   ngOnInit() {
     this.productosService.getBuscados()

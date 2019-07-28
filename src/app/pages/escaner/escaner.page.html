@@ -1,14 +1,3 @@
-<ion-header 
- no-border>
-  <ion-toolbar color="warning">
-    <ion-buttons slot="start">
-      <ion-back-button text="" defaultHref="/tabs/tabs/tab2"></ion-back-button>
-    </ion-buttons>
-    <ion-title
-    >Ofertas</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 
 <ion-content>
 
@@ -28,25 +17,22 @@
           {{ slide.desc }}
         </ion-card-content>
 
-        <ion-button class="boton-slide" expand="block"
-    color="light"
-    fill="solid"
-    (click)="onClick()"
-    >
-  ¡De Acuerdo!   
-  
-  </ion-button>
-
       </ion-card >
-
-      
 
     </ion-slide>
      
-    
+  <ion-slide>
+    <ion-button expand="block"
+                color="light"
+                fill="solid"
+                (click)="onClick()"
+                >
+             ¡De acuerdo!   
+
+    </ion-button>
+  </ion-slide>
+
   </ion-slides>
 
-  
 
 </ion-content>
-

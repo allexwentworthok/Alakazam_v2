@@ -13,9 +13,9 @@ export class Tab1Page implements OnInit {
     buscados: any[] = [];
     textoBuscar = '';
 
-  constructor(private productosService: ProductosService,
-              private datalocalService: DataLocalService,
-              private productosServices: ProductosService) {}
+  constructor(public productosService: ProductosService,
+              public datalocalService: DataLocalService,
+              public productosServices: ProductosService) {}
 
   ngOnInit() {
 

@@ -14,7 +14,7 @@ export class ProductoComponent implements OnInit {
   @Input() enAgregados;
 
   constructor( public actionSheetCtrl: ActionSheetController,
-               private datalocalService: DataLocalService ) { }
+               public datalocalService: DataLocalService ) { }
 
   ngOnInit() {
 
