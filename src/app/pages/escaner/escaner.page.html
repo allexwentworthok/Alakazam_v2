@@ -1,38 +1,8 @@
 
 <ion-content>
 
-  <ion-slides pager="true" class="slide-full">
-
-    <ion-slide *ngFor="let slide of slides">
-
-      <ion-card color="light" mode="ios">
-
-        <img [src]="slide.img" class="slide-image">
-        
-        <ion-card-header>
-        <ion-card-title> {{ slide.titulo }} </ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          {{ slide.desc }}
-        </ion-card-content>
-
-      </ion-card >
-
-    </ion-slide>
-     
-  <ion-slide>
-    <ion-button expand="block"
-                color="light"
-                fill="solid"
-                (click)="onClick()"
-                >
-             ¡De acuerdo!   
-
-    </ion-button>
-  </ion-slide>
-
-  </ion-slides>
-
+<h1 class="ofertas">
+  Ofertas
+</h1>
 
 </ion-content>

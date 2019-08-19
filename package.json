@@ -27,6 +27,7 @@
     "@ionic/storage": "^2.2.0",
     "cordova-android": "^8.0.0",
     "cordova-ios": "^5.0.1",
+    "cordova-plugin-exitapp": "^1.0.0",
     "cordova-sqlite-storage": "^3.2.1",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
@@ -74,7 +75,9 @@
       "cordova-plugin-statusbar": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-webview": {
+        "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
+      },
       "cordova-plugin-ionic-keyboard": {}
     },
     "platforms": [

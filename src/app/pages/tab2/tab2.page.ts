@@ -1,12 +1,21 @@
 import { Component } from '@angular/core';
 
-@Component({
+
+ @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
 
-  constructor() {}
+  constructor() {
 
+    function closeMeNow() {
+      navigator['app'].exitApp();
+    }
+
+  }
+
+
+ 
 }

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiKey: 'http://wentapps.com/api_server/response.json'
+  apiKey: 'http://wentapps.com/auth/public/api/producto'
 };
 
 /*

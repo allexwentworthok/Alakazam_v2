@@ -4,7 +4,7 @@
                     (ionChange)="buscar( $event )"
       >
       </ion-searchbar>
-<ion-grid fixed>
+<ion-grid  class="centrar-col" fixed>
   <ion-row>
     <ion-col col-12 *ngFor="let producto of productos | filtro: textoBuscar ">
       <app-producto [producto]="producto"
