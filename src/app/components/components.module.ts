@@ -4,13 +4,18 @@ import { IonicModule } from '@ionic/angular';
 import { ProductoComponent } from './producto/producto.component';
 import { ProductosComponent } from './productos/productos.component';
 import { PipesModule } from '../pipes/pipes.module';
+import { DetalleComponent } from './detalle/detalle.component';
 
 @NgModule({
+  entryComponents:[
+    DetalleComponent
+  ],
   declarations: [ProductoComponent,
-  ProductosComponent],
+  ProductosComponent, DetalleComponent],
 
   exports: [
-    ProductosComponent
+    ProductosComponent,
+    DetalleComponent
   ],
 
   imports: [

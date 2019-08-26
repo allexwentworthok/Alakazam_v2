@@ -1,52 +1,57 @@
 <ion-header 
  no-border>
-  <ion-toolbar color="warning">
+  <ion-toolbar color="secondary">
     <ion-buttons slot="start">
       <ion-back-button text="" defaultHref="/tabs/tabs/tab2"></ion-back-button>
     </ion-buttons>
     <ion-title
-    >Ofertas</ion-title>
+    >Productos Selecionados</ion-title>
   </ion-toolbar>
 </ion-header>
 
 
 <ion-content>
 
-  <ion-slides pager="true" class="slide-full">
+    <ion-card>
 
-    <ion-slide *ngFor="let slide of slides">
-
-      <ion-card color="light" mode="ios">
-
-        <img [src]="slide.img" class="slide-image">
-        
-        <ion-card-header>
-        <ion-card-title> {{ slide.titulo }} </ion-card-title>
-        </ion-card-header>
-
-        <ion-card-content>
-          {{ slide.desc }}
-        </ion-card-content>
-
-        <ion-button class="boton-slide" expand="block"
-    color="light"
-    fill="solid"
-    (click)="onClick()"
-    >
-  ¡De Acuerdo!   
-  
-  </ion-button>
-
-      </ion-card >
-
+        <div class="producto-more">
+            <ion-button fill="clear"
+                        (click)="lanzarMenu()">
+                      <ion-icon color="dark" slot="icon-only" name="more"></ion-icon>
+              </ion-button>
       
-
-    </ion-slide>
-     
-    
-  </ion-slides>
-
-  
+        </div>
+      
+      
+        <img src="{{ producto.img }}"/>
+        <ion-card-content>
+          <ion-card-title class="titulo">
+            {{ producto.name }}
+          </ion-card-title>
+      
+          <ion-card-subtitle color="warning">
+            {{producto.precio}}
+          </ion-card-subtitle>
+          
+      
+          <p>
+            {{ producto.content }}
+          </p>
+      
+          <div class="boton-comercios">
+      
+            <ion-button mode="ios" 
+                        size="small" 
+                        expand="block" 
+                        fill="solid" 
+                        routerLink="/comercios" 
+                        color="success">{{producto.comercio}}
+            </ion-button>
+          
+          </div>
+      
+        </ion-card-content>
+      </ion-card>
 
 </ion-content>
 

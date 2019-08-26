@@ -4,7 +4,7 @@
 
     <ion-slide *ngFor="let slide of slides">
 
-      <ion-card color="light" mode="ios">
+      <ion-card  mode="ios">
 
         <img [src]="slide.img" class="slide-image">
         
@@ -20,18 +20,30 @@
 
     </ion-slide>
      
-  <ion-slide>
-    <ion-button expand="full"
-                color="light"
-                fill="outline"
-                (click)="onClick()"
-                >
-             ¡Comenzar!   
-
-    </ion-button>
-  </ion-slide>
+  
+    
+  
 
   </ion-slides>
 
 
 </ion-content>
+
+<ion-footer  no-border>
+
+    <ion-grid fixed>
+      <ion-row>
+        <ion-col size="10" offset="1">
+          <ion-button color="success"
+                      expand="full"
+                      shape="round"
+                      mode="ios"
+                      class="boton"
+                      href="tabs/tabs/tab2">
+            Ingresar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-footer>

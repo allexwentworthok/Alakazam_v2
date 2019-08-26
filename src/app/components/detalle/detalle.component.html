@@ -1,0 +1,47 @@
+
+
+<ion-content color="warning">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="12" size="12">
+        <ion-card color="light" >
+          <img class="imagen" src="{{img}}">
+
+          <ion-card-header>
+            <ion-card-title>
+              <h1 class="titulo"> {{name}} </h1>
+              <h5 class="desc">
+                  {{precio}}
+                </h5>
+            </ion-card-title>
+            
+            <ion-card-content>
+                <h2 class="dura"> {{content}} </h2>
+
+                <h4 class="comercio">{{comercio}}</h4>
+            </ion-card-content>
+          </ion-card-header>
+
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <ion-fab  vertical="bottom" horizontal="end" slot="fixed">
+      <ion-fab-button color="success" (click)="regresar()">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+
+    
+
+    
+    
+    
+    
+
+</ion-content>
+

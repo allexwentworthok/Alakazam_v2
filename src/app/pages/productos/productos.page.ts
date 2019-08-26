@@ -9,15 +9,7 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./productos.page.scss'],
 })
 export class ProductosPage implements OnInit {
-  slides: { img: string, titulo: string, desc: string }[] = [
-    
-    {
-      img:'/assets/assets/slides/052-coupon-1.svg',
-    titulo: 'Las mejores ofertas',
-    desc: 'Esta semana no tenemos ofertas disponibles',
-    },
-];
-
+ 
 
 constructor(private navCtrl: NavController) { }
 

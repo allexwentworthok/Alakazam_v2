@@ -4,9 +4,10 @@
                     (ionChange)="buscar( $event )"
       >
       </ion-searchbar>
-<ion-grid  class="centrar-col" fixed>
-  <ion-row>
-    <ion-col col-12 *ngFor="let producto of productos | filtro: textoBuscar ">
+      
+<ion-grid   fixed>
+  <ion-row >
+    <ion-col  size="6" size-xs="6"  *ngFor="let producto of productos | filtro: textoBuscar "> 
       <app-producto [producto]="producto"
                     [enAgregados]="enAgregados"></app-producto>
     </ion-col>

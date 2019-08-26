@@ -17,7 +17,7 @@ export class ProductosComponent implements OnInit {
   ngOnInit() {
     this.productosService.getBuscados()
     .subscribe( buscados => {
-      console.log(buscados);
+      
       this.buscados = buscados;
     });
 

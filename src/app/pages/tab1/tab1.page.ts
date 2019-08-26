@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductosService } from 'src/app/services/productos.service';
 import { Resultado } from 'src/app/interfaces/interfaces';
 import { DataLocalService } from 'src/app/services/data-local.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-tab1',
@@ -12,27 +13,41 @@ export class Tab1Page implements OnInit {
     productos: Resultado [] = [];
     buscados: any[] = [];
     textoBuscar = '';
+    headline$ : Subscription;
+    headlines : any[];
 
   constructor(public productosService: ProductosService,
               public datalocalService: DataLocalService,
-              public productosServices: ProductosService) {}
+              ) {}
 
   ngOnInit() {
+      
+    this.fetchData();
 
       this.productosService.getBuscados()
       .subscribe( buscados => {
-        console.log(buscados);
+        
         this.buscados = buscados;
       });
 
 
-      this.productosServices.getTopHeadlines()
-    .subscribe( resp => {
-      console.log('Hola Mundo', resp.resultados );
-      this.productos.push(...resp.resultados);
-    });
+    }
+
+    buscar( event ) {
+      this.textoBuscar = event.detail.value;
+    }
+
+    async fetchData() {
+        this.headline$ = await this.productosService.getTopHeadlines().subscribe(resp =>{
+          console.log(resp);
+          this.headlines = resp;
+          this.productos.push(...resp);
+        })
+    }
+
+    
+
+
+
   }
-  buscar( event ) {
-    this.textoBuscar = event.detail.value;
-  }
-}
+  

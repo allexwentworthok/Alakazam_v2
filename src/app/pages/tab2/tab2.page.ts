@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { Platform } from '@ionic/angular';
 
  @Component({
   selector: 'app-tab2',
@@ -10,12 +10,14 @@ export class Tab2Page {
 
   constructor() {
 
-    function closeMeNow() {
-      navigator['app'].exitApp();
-    }
-
+     
+    
+    
   }
 
-
+  closeApp() {
+    const route = 'app';
+       navigator[route].exitApp();
+     }
  
 }

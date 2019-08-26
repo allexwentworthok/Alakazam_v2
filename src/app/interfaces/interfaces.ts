@@ -10,6 +10,9 @@ export interface Resultado {
   content: string;
   precio: string;
   comercio: string;
-  created_at?: any;
-  updated_at?: any;
+  status: string;
 }
+
+
+
+

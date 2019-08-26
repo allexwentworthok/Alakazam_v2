@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
+import { DataLocalService } from 'src/app/services/data-local.service';
 
 @Component({
   selector: 'app-slides',
@@ -20,18 +21,23 @@ export class SlidesPage implements OnInit {
           desc: 'Agrega y elimina, organizala como vos quieras.',
         },
         {
-          img:'/assets/assets/slides/013-barcode-1.svg',
-        titulo: 'Escanea códigos de barra',
-        desc: 'Escanea todos los productos seleccionados',
+          img:'/assets/assets/slides/productos-ofertas.svg',
+        titulo: 'Encontra las mejores ofertas',
+        desc: 'En los comercios adheridos',
         },
     ];
 
     
-  constructor(private navCtrl: NavController) { }
+  constructor(  dataLocalService: DataLocalService,
+                private navCtrl: NavController) { }
 
   ngOnInit() {
   }
     onClick() {
       this.navCtrl.navigateBack('tabs/tabs/tab2');
     }
+
+
+
+    
 }

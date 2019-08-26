@@ -1,4 +1,4 @@
-<ion-card>
+<ion-card >
 
   <div class="producto-more">
       <ion-button fill="clear"
@@ -10,8 +10,8 @@
 
 
   <img src="{{ producto.img }}"/>
-  <ion-card-content>
-    <ion-card-title>
+  <ion-card-content (click)="verDetalle( producto.name, producto.img, producto.content, producto.precio, producto.comercio)">
+    <ion-card-title class="titulo">
       {{ producto.name }}
     </ion-card-title>
 

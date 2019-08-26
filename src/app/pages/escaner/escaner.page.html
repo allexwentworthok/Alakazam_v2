@@ -1,8 +1,42 @@
 
-<ion-content>
+<ion-header 
+no-border>
+ <ion-toolbar color="warning">
+   <ion-buttons slot="start">
+     <ion-back-button text="" defaultHref="/tabs/tabs/tab2"></ion-back-button>
+   </ion-buttons>
+   <ion-title
+   >Ofertas</ion-title>
+ </ion-toolbar>
+</ion-header>
 
-<h1 class="ofertas">
-  Ofertas
-</h1>
+<ion-content color="warning">
+    
+    <ion-slides [options]="slidesOpts" class="slide-full">
+  
+        <ion-slide *ngFor="let slide of slides">
+    
+          
+      <ion-card    color="light" mode="ios">
 
+        <img [src]="slide.img" class="slide-image">
+        
+        <ion-card-header >
+        <ion-card-title class="titulo" > {{ slide.titulo }} </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <p class="descuento" color="secondary">{{ slide.descuento }}</p>
+          <p class="comercio">{{slide.comercio}}</p>
+        </ion-card-content>
+
+        
+        
+      </ion-card >
+        </ion-slide>
+    
+      </ion-slides>
+      
+
+      
 </ion-content>
