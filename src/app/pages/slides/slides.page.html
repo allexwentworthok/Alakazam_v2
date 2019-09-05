@@ -1,6 +1,6 @@
 <ion-content>
 
-  <ion-slides pager="true" class="slide-full">
+  <ion-slides [options]="slideOptions"  #slider (ionSlidesDidLoad)="slidesDidLoad(slider)" pager="true" class="slide-full">
 
     <ion-slide *ngFor="let slide of slides">
 

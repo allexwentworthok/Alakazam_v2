@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController } from '@ionic/angular';
 import { DataLocalService } from 'src/app/services/data-local.service';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-slides',
@@ -8,6 +9,11 @@ import { DataLocalService } from 'src/app/services/data-local.service';
   styleUrls: ['./slides.page.scss'],
 })
 export class SlidesPage implements OnInit {
+  
+  slideOptions = {
+    initialSlide: 0,
+    speed: 400,
+  };
 
     slides: { img: string, titulo: string, desc: string }[] = [
         {
@@ -39,5 +45,7 @@ export class SlidesPage implements OnInit {
 
 
 
-    
+    slidesDidLoad(slides: IonSlides) {
+  slides.startAutoplay();
+}
 }

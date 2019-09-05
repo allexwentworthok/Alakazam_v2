@@ -28,7 +28,10 @@ export class ProductosService {
     return this.http.get<any[]>('http://wentapps.com/auth/public/api/producto');
   }
 
-  
+  getOfertas () : Observable<any> {
+    const route = "http://wentapps.com/api_server/ofertas.json";
+    return this.http.get<any>(route);
+  }
 
 }
 

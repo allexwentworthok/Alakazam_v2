@@ -1,59 +1,46 @@
-.slide-full {
-    top:15%;
-    width: 100%;
-    display: block;
-}
-
-.slide-image {
-    width: 35%;
-    border-radius: 5px;
-    
-    text-align: center;
-
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-
-    position: relative;
-    top: 25px;
-}
-
 ion-card {
-    width: 400px;
-    height: 265px;
-}
-.descuento {
-    color: red;
-    text-decoration-color: red;
-}
-.titulo {
-    top: 80%x;
-    font-size: 22px;
+    width: 80% !important;
+    height: 250px !important;
     text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-}
-
-.text {
+    position: center;
+  }
+  
+  img {
+    position: relative;
+    top: 10px;
+    width: 80px;
+    height: 80px;
+  
+    display: block;
+        margin-left: auto;
+        margin-right: auto;
+  }
+  
+  
+  
+  .producto-more {
+    font-size: 25px !important;
+    position: absolute;
+    right: -10px;
+    top: 5px;
+  }
+  
+  .boton-comercios {
+    top: 118px;
+    position: absolute;
+    right: 10%;
+    left: 10%;
     
-    font-size: 32px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 20%;
-    font-style: bold;
     
+     
+  }
 
-}
-.comercio {
-    color: #58b368;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  .titulo {
     font-size: 18px;
-}
+  }
 
-
-
-
-
-
-
-
+ 
+  .precio {
+      top: 20%;
+      color: red;
+  }

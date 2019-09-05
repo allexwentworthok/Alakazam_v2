@@ -1,7 +1,7 @@
 
 <ion-header 
 no-border>
- <ion-toolbar color="warning">
+ <ion-toolbar color="secondary">
    <ion-buttons slot="start">
      <ion-back-button text="" defaultHref="/tabs/tabs/tab2"></ion-back-button>
    </ion-buttons>
@@ -10,33 +10,135 @@ no-border>
  </ion-toolbar>
 </ion-header>
 
-<ion-content color="warning">
+<ion-content color="light">
     
-    <ion-slides [options]="slidesOpts" class="slide-full">
+    <ion-grid>
+      <ion-row>
+        
+          <ion-col size-xs="6" size="6">
+              <ion-card color="light" mode="ios" >
+                   <img src="http://tiendaconsol.coop/322-large_default/yerba-mate-playadito-x-1kg.jpg">
+                <ion-card-header>
+                    <ion-card-subtitle text-center> <ion-text color="dark">Playadito Yerba Mate</ion-text></ion-card-subtitle>
+                  <ion-card-content><p class="precio">$67.99</p></ion-card-content>
+                  <div class="boton-comercios">
+
+                      <ion-button mode="ios" 
+                                  size="small" 
+                                  expand="block" 
+                                  fill="solid" 
+                                  routerLink="/comercios" 
+                                  color="success">Diarco
+                      </ion-button>
+                    
+                    </div>
+                </ion-card-header>
+              </ion-card>
+            </ion-col>
+
+            <ion-col size-xs="6" size="6">
+                <ion-card color="light" mode="ios" >
+                     <img src="https://http2.mlstatic.com/arveja-okey-340-grs-D_NQ_NP_751888-MLA31024304442_062019-Q.jpg">
+                  <ion-card-header>
+                      <ion-card-subtitle text-center> <ion-text color="dark">Okey Arvejas</ion-text></ion-card-subtitle>
+                    <ion-card-content><p class="precio">$13,49</p></ion-card-content>
+                    <div class="boton-comercios">
   
-        <ion-slide *ngFor="let slide of slides">
-    
-          
-      <ion-card    color="light" mode="ios">
+                        <ion-button mode="ios" 
+                                    size="small" 
+                                    expand="block" 
+                                    fill="solid" 
+                                    routerLink="/comercios" 
+                                    color="success">Diarco
+                        </ion-button>
+                      
+                      </div>
+                  </ion-card-header>
+                </ion-card>
+              </ion-col>
 
-        <img [src]="slide.img" class="slide-image">
-        
-        <ion-card-header >
-        <ion-card-title class="titulo" > {{ slide.titulo }} </ion-card-title>
-        </ion-card-header>
+      </ion-row>
 
-        <ion-card-content>
-          <p class="descuento" color="secondary">{{ slide.descuento }}</p>
-          <p class="comercio">{{slide.comercio}}</p>
-        </ion-card-content>
+      <ion-row>
+        
+          <ion-col size-xs="6" size="6">
+              <ion-card color="light" mode="ios" >
+                   <img src="https://d26lpennugtm8s.cloudfront.net/stores/323/592/products/bife-americano21-cf5ea7d2934d5bc8df14941859534781-1024-1024.jpeg">
+                <ion-card-header>
+                    <ion-card-subtitle text-center> <ion-text color="dark">Bife Americano x kg</ion-text></ion-card-subtitle>
+                  <ion-card-content><p class="precio">$210</p></ion-card-content>
+                  <div class="boton-comercios">
 
+                      <ion-button mode="ios" 
+                                  size="small" 
+                                  expand="block" 
+                                  fill="solid" 
+                                  routerLink="/comercios" 
+                                  color="success">ChangoMas
+                      </ion-button>
+                    
+                    </div>
+                </ion-card-header>
+              </ion-card>
+            </ion-col>
+
+            <ion-col size-xs="6" size="6">
+                <ion-card color="light" mode="ios" >
+                     <img src="https://cdn.shopify.com/s/files/1/2538/5286/products/asado-tira-crudo2_400x.jpg?v=1544379534">
+                  <ion-card-header>
+                      <ion-card-subtitle text-center> <ion-text color="dark">Asado de Tira x kg.</ion-text></ion-card-subtitle>
+                    <ion-card-content><p class="precio">$169</p></ion-card-content>
+                    <div class="boton-comercios">
+  
+                        <ion-button mode="ios" 
+                                    size="small" 
+                                    expand="block" 
+                                    fill="solid" 
+                                    routerLink="/comercios" 
+                                    color="success">ChangoMas
+                        </ion-button>
+                      
+                      </div>
+                  </ion-card-header>
+                </ion-card>
+              </ion-col>
+
+      </ion-row>
         
-        
-      </ion-card >
-        </ion-slide>
-    
-      </ion-slides>
+
+
+    </ion-grid>
       
 
       
 </ion-content>
+
+<ion-footer>
+    <ion-toolbar color="success">
+        <ion-tabs no-border>
+
+            <ion-tab-bar no-border color="success" slot="bottom">
+              <ion-tab-button routerLink="/tabs/tabs/tab1">
+                <ion-icon  color="light" name="search"></ion-icon>
+                <ion-label>Busqueda</ion-label>
+              </ion-tab-button>
+          
+              
+          
+              <ion-tab-button routerLink="/tabs/tabs/tab2">
+                <ion-icon  color="light" name="home"></ion-icon>      
+                <ion-label>Inicio</ion-label>
+              </ion-tab-button>
+          
+              <ion-tab-button routerLink="/tabs/tabs/tab3">
+                <ion-icon  color="light" name="bookmark"></ion-icon>
+                <ion-label>Mi lista</ion-label>
+              </ion-tab-button>
+          
+          
+            </ion-tab-bar>
+          
+          </ion-tabs>
+        
+      </ion-toolbar>
+</ion-footer>
